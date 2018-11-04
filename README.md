@@ -105,7 +105,7 @@ To generate the jittered images I used [OpenCV](https://opencv-python-tutroals.r
 
 > Note
 >
-> I used Udacity's classroom workspace. So, [`data_dir = '/data'`](https://github.com/mhBahrami/CarND-Semantic-Segmentation/blob/master/main.py#L250). If you want to run it somewhere else make sure change it to `data_dir = './data'`.
+> I used Udacity's classroom workspace. So, I set `data_dir` to `'/data'` ([line 250](https://github.com/mhBahrami/CarND-Semantic-Segmentation/blob/master/main.py#L250)). If you want to run it somewhere else make sure change it to `data_dir = './data'`.
 
 ### Setup
 
