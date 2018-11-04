@@ -15,23 +15,23 @@ In this project, you'll label the pixels of a road in images using a Fully Convo
 
 #### Build the Neural Network
 
-Because the implementation in [`main.py`] has passed all the test functions so it has met the criteria.
+Because the implementation in [`main.py`](https://github.com/mhBahrami/CarND-Semantic-Segmentation/blob/master/main.py) has passed all the tests so it has met the criteria.
 
 - The function `load_vgg` is implemented correctly.
 
-- > From [line] to [line]. 
+- > From [line 23](https://github.com/mhBahrami/CarND-Semantic-Segmentation/blob/master/main.py#L23) to [line 49](https://github.com/mhBahrami/CarND-Semantic-Segmentation/blob/master/main.py#L49). 
 
 - The function `layers` is implemented correctly.
 
-- > From [line] to [line]. 
+- > From [line 53](https://github.com/mhBahrami/CarND-Semantic-Segmentation/blob/master/main.py#L53) to [line 162](https://github.com/mhBahrami/CarND-Semantic-Segmentation/blob/master/main.py#L162). 
 
 - The function `optimize` is implemented correctly.
 
-- > From [line] to [line]. 
+- > From [line 166](https://github.com/mhBahrami/CarND-Semantic-Segmentation/blob/master/main.py#L166) to [line 197](https://github.com/mhBahrami/CarND-Semantic-Segmentation/blob/master/main.py#L197). 
 
 - The function `train_nn` is implemented correctly.
 
-- > From [line] to [line]. 
+- > From [line 201](https://github.com/mhBahrami/CarND-Semantic-Segmentation/blob/master/main.py#L201) to [line 242](https://github.com/mhBahrami/CarND-Semantic-Segmentation/blob/master/main.py#L242). 
 
 #### Neural Network Training
 
@@ -42,6 +42,8 @@ Yes, it does. you can see the loss (%) over time in the following figure:
 | Loss (%) Over Time  |
 | :-----------------: |
 | ![alt text][image1] |
+
+In addition, during the training you can see the progress over time in terminal. I put the log info in [log.txt](https://github.com/mhBahrami/CarND-Semantic-Segmentation/blob/master/log.txt) file.
 
 ##### Does the project use reasonable hyperparameters?
 
@@ -58,7 +60,7 @@ learning_rate_value = 1e-4
 
 ##### Does the project correctly label the road?
 
-Yes, it does. You can find the labeled images in [./runs/1541284958.1358018]. Also I put a fast preview of them below:
+Yes, it does. You can find the labeled images in [./runs/1541284958.1358018](https://github.com/mhBahrami/CarND-Semantic-Segmentation/tree/master/runs/1541284958.1358018). Also I put a fast preview of them below:
 
 | Fast Preview of Labeled Images |
 | :----------------------------: |
@@ -70,7 +72,7 @@ Yes, it does. You can find the labeled images in [./runs/1541284958.1358018]. Al
 
 The network architecture for the network is as follows:
 
-```js
+```python
   [vgg3]     [vgg4]     [vgg7]
     |          |          |
     |          |          \--->[conv2d:1x1]---\
@@ -95,15 +97,15 @@ The network architecture for the network is as follows:
 
 I used the [Kitti Road dataset](http://www.cvlibs.net/datasets/kitti/eval_road.php) from [here](http://www.cvlibs.net/download.php?file=data_road.zip). Also I generated new jittered date and add them to the data set to have a better training data set. 
 
-> I add them to `helper.py` (From [line] to [line]).
+> I add them to [`helper.py`](https://github.com/mhBahrami/CarND-Semantic-Segmentation/blob/master/helper.py) (From [line 102](https://github.com/mhBahrami/CarND-Semantic-Segmentation/blob/master/helper.py#L102) to [line 218](https://github.com/mhBahrami/CarND-Semantic-Segmentation/blob/master/helper.py#L218)).
 
-To generate the jittered images I used [OpenCV](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_setup/py_table_of_contents_setup/py_table_of_contents_setup.html#py-table-of-content-setup) to scale up, rotate CW/CCW, and flip them (From [line] to [line]). Also, I adjust the gamma of images (From [line] to [line]).
+To generate the jittered images I used [OpenCV](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_setup/py_table_of_contents_setup/py_table_of_contents_setup.html#py-table-of-content-setup) to scale up, rotate CW/CCW, and flip them (From [line 178](https://github.com/mhBahrami/CarND-Semantic-Segmentation/blob/master/helper.py#L178) to [line 200](https://github.com/mhBahrami/CarND-Semantic-Segmentation/blob/master/helper.py#L200)). Also, I adjust the gamma of images ([line 203](https://github.com/mhBahrami/CarND-Semantic-Segmentation/blob/master/helper.py#L203)).
 
 ***It all helps to bring more variety to data set of images and improve road recognition at the end.***
 
 > Note
 >
-> I used Udacity's classroom workspace. So, `data_dir = '/data'`. If you want to run it somewhere else make sure change it to `data_dir = './data'`.
+> I used Udacity's classroom workspace. So, [`data_dir = '/data'`](https://github.com/mhBahrami/CarND-Semantic-Segmentation/blob/master/main.py#L250). If you want to run it somewhere else make sure change it to `data_dir = './data'`.
 
 ### Setup
 
@@ -115,7 +117,7 @@ Make sure you have the following is installed:
  - [TensorFlow](https://www.tensorflow.org/)
  - [NumPy](http://www.numpy.org/)
  - [SciPy](https://www.scipy.org/)
- - [OpenCV](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_setup/py_table_of_contents_setup/py_table_of_contents_setup.html#py-table-of-content-setup).
+ - [OpenCV](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_setup/py_table_of_contents_setup/py_table_of_contents_setup.html#py-table-of-content-setup)
 ##### Dataset
 Download the [Kitti Road dataset](http://www.cvlibs.net/datasets/kitti/eval_road.php) from [here](http://www.cvlibs.net/download.php?file=data_road.zip).  Extract the dataset in the `data` folder.  This will create the folder `data_road` with all the training a test images.
 
@@ -123,6 +125,7 @@ Download the [Kitti Road dataset](http://www.cvlibs.net/datasets/kitti/eval_road
 ##### Implement
 Implement the code in the `main.py` module indicated by the "TODO" comments.
 The comments indicated with "OPTIONAL" tag are not required to complete.
+
 ##### Run
 Run the following command to run the project:
 ```
@@ -137,4 +140,4 @@ python main.py
 - When adding l2-regularization, setting a regularizer in the arguments of the `tf.layers` is not enough. Regularization loss terms must be manually added to your loss function. otherwise regularization is not implemented.
 
 ### License
-[MIT License].
+[MIT License](https://github.com/mhBahrami/CarND-Semantic-Segmentation/blob/master/LICENSE).
