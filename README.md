@@ -72,7 +72,7 @@ Yes, it does. You can find the labeled images in [./runs/1541284958.1358018](htt
 
 The network architecture for the network is as follows:
 
-```javascript
+```c++
   [vgg3]     [vgg4]     [vgg7]
     |          |          |
     |          |          \--->[conv2d:1x1]---\
